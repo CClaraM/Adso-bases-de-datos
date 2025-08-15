@@ -12,7 +12,7 @@ class PersonaActividad {
   }
 
   void menor(){
-    if (this.edad >= 18 ) {
+    if (edad >= 18 ) {
       print("soy mayor de edad");
     } else {
       print("no soy mayor");
@@ -20,10 +20,10 @@ class PersonaActividad {
   }
 
   void Salario(){
-    if (this.salario >1500000) {
+    if (salario >1500000) {
       print('subsidio de alimentacion es ${this.salario*0.023}');
       print('valor retefuente es ${this.salario*0.08}');
-      print('Salario total es ${(this.salario*0.08)+(this.salario*0.023)+this.salario}');
+      print('Salario total es ${this.salario-((this.salario*0.08)+(this.salario*0.023))}');
     }
   }
 } //Fin de clase personaActividad
