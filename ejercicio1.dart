@@ -11,12 +11,18 @@ void main() {
   double? valor_pedido =double.parse(stdin.readLineSync()!);
   print("Seleccione el tipo de servicio\n\t1. Comida.\n\t2. Farmacia.\n\t3. Supermarcado.\nSeleccione una opcion.");
   double? servicio_pedido =double.parse(stdin.readLineSync()!);
-  print("Danos tu evaluacion de calidad de servicio");
-  
-  print(valor_pedido);
-  print(servicio_pedido);
+  print("Danos tu evaluacion de calidad de servicio\n\t1. exelente\n\t2. bueno\n\t3. regular\nDigita la opcion.");
+  double? servicio_calidad =double.parse(stdin.readLineSync()!);
+
+if (servicio_calidad==1) {
+  print("La propina recomendada para el servicio es de ${valor_pedido*0.2} para un total de ${(valor_pedido*0.2)+valor_pedido}");
+}else if (servicio_calidad==2){
+  print("La propina recomendada para el servicio es de ${valor_pedido*0.15} para un total de ${(valor_pedido*0.15)+valor_pedido}");
+} else {
+  print("La propina recomendada para el servicio es de ${valor_pedido*0.1} para un total de ${(valor_pedido*0.1)+valor_pedido}");
 }
 
+}
 /*Ejercicio 2: Verificador de Contraseñas Seguras
 Cree un sistema que evalúe la fortaleza de contraseñas para aplicaciones móviles. Solicite una contraseña al
 usuario y verifique: longitud mínima 8 caracteres, contiene mayúsculas, minúsculas, números y caracteres
